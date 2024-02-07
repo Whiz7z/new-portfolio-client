@@ -39,7 +39,9 @@ const Skills = () => {
   }, []);
 
   const getSkills = async () => {
-    const { data } = await axios.get("http://localhost:1338/api/skills/");
+    const { data } = await axios.get(
+      `${import.meta.env.VITE_REACT_APP_STRAPI_API_URL}/api/skills/`
+    );
     console.log(data.data.map((skill) => skill.attributes.skillName));
     setSkills(data.data.map((skill) => skill.attributes.skillName));
   };

@@ -39,7 +39,9 @@ const Experience = () => {
   const { ref } = useSectionInView("Experience");
   const [experiences, setExperiences] = useState([]);
   const getExperiences = async () => {
-    const { data } = await axios.get("http://localhost:1338/api/experiences/");
+    const { data } = await axios.get(
+      `${import.meta.env.VITE_REACT_APP_STRAPI_API_URL}/api/experiences/`
+    );
     console.log(data.data.map((experience) => experience.attributes));
     setExperiences(data.data.map((experience) => experience.attributes));
   };

@@ -69,7 +69,7 @@ const ProjectItem = (props) => {
         <div className={styles.image_wrapper}>
           <img
             className={styles.img}
-            src={`http://localhost:1338${image}`}
+            src={`${import.meta.env.VITE_REACT_APP_STRAPI_API_URL}${image}`}
             alt="project"
           />
         </div>

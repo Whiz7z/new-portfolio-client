@@ -17,7 +17,9 @@ const Projects = () => {
 
   const getProjects = async () => {
     const { data } = await axios.get(
-      "http://localhost:1338/api/projects/?populate=project_skills,mainImg"
+      `${
+        import.meta.env.VITE_REACT_APP_STRAPI_API_URL
+      }/api/projects/?populate=project_skills,mainImg`
     );
     //console.log(data.data.map((project) => project.attributes));
     setProjects(data.data.map((project) => project.attributes));
