@@ -1,0 +1,342 @@
+@import "../../styles/variables"
+
+
+.experience_wrapper
+  display: grid
+  grid-template-columns: 1fr
+  gap: 60px
+  width: 100%
+  margin-top: 480px
+  margin-bottom: 80px
+
+  h2
+    justify-self: center
+    font-size: 4.8rem
+    color: $dark
+
+  .experiences
+    padding: 80px 0 
+    color: $dark
+    display: grid
+    grid-template-columns: 12% 1fr 12%
+    justify-items: center
+    width: 100%
+    row-gap: 80px
+    position: relative
+    z-index: 10
+    
+    .line 
+      position: absolute
+      width: 8px
+      height: 100%
+      background: $lightdark
+      z-index: 2
+
+    .experience_left
+
+      .experience_card
+        justify-self: end
+        position: relative
+        &::after
+          content: ""
+          position: absolute
+          width: 25px
+          height: 25px
+          clip-path: polygon(50% 50%, 0% 100%, 100% 100%)
+          background: $lightdark
+          z-index: 2
+          right: -25px
+          top: calc( 60px - 12.5px  )
+          transform: rotateZ(90deg)
+          
+
+    .experience_right
+      grid-template-rows: 1fr
+      
+      .experience_card
+        grid-row: 1/2
+        grid-column: 3/4
+        position: relative
+        &::after
+          content: ""
+          position: absolute
+          width: 25px
+          height: 25px
+          clip-path: polygon(50% 50%, 0% 100%, 100% 100%)
+          background: $lightdark
+          z-index: 2
+          left: -25px
+          top: calc( 60px - 12.5px  )
+          transform: rotateZ(-90deg)
+
+      .circle
+        grid-row: 1/2
+        grid-column: 2/3
+
+      .date
+        grid-row: 1/2
+        grid-column: 1/2
+        justify-self: end
+
+    .experience
+      width: 100%
+      display: grid
+      grid-template-columns: 1fr 120px 1fr
+      grid-column: 2/3
+      column-gap: 40px
+      justify-self: center
+      align-items: center
+      
+      .experience_card
+        padding: 20px
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr
+        justify-items: start
+        align-items: center
+        background: $lightdark
+        max-width: 500px
+        border-radius: 4px
+
+
+
+        h3
+          font-size: 2.4rem
+          font-weight: bold
+          // margin-bottom: 10px
+
+        .company
+          font-size: 2.2rem
+          font-weight: regular
+
+        .description
+          font-size: 2rem
+          align-self: end
+          margin-top: 30px
+
+        .date
+          display: none
+          visibility: hidden
+      .circle
+        width: 120px
+        height: 120px
+        background: $lightdarkTransparency
+        border-radius: 50%
+        border: solid 8px $lightdark
+        z-index: 15
+        align-self: start
+
+      .date
+        font-size: 2.4rem
+        font-weight: regular
+        z-index: 15
+        align-self: start
+        
+        margin-top: calc( 60px - 2rem )
+        
+  @media screen and (max-width: 1340px)
+    h2
+      font-size: 3.6rem
+
+    .experiences
+
+      .experience 
+        .experience_card
+
+          h3
+            font-size: 2.2rem
+          .company
+            font-size: 2rem
+          
+          .description
+            font-size: 1.8rem
+
+  @media screen and (max-width: 1200px)
+
+    .experiences
+      grid-template-columns: 40px 1fr 40px
+      .line
+        left: 38px
+        grid-column: 2/3
+        width: 4px
+
+
+      .experience_left
+        .experience_card
+          grid-column: 2/3
+          justify-self: start
+
+          &::after
+            content: ""
+            position: absolute
+            width: 25px
+            height: 25px
+            clip-path: polygon(50% 50%, 0% 100%, 100% 100%)
+            background: $lightdark
+            z-index: 2
+            right: -25px
+            top: calc( 60px - 12.5px  )
+            left: -25px
+            
+            transform: rotateZ(-90deg)
+
+        .date
+          grid-row: 4/5
+          justify-self: start
+
+        .circle
+          grid-column: 1/2
+          grid-row: 1/2
+          
+
+      .experience_right
+        .experience_card
+          grid-column: 2/3
+          justify-self: start
+          &::after
+            content: ""
+            position: absolute
+            width: 25px
+            height: 25px
+            clip-path: polygon(50% 50%, 0% 100%, 100% 100%)
+            background: $lightdark
+            z-index: 2
+            left: -25px
+            top: calc( 60px - 12.5px  )
+            transform: rotateZ(-90deg)
+
+        .date
+          grid-row: 4/5
+          justify-self: start
+
+        .circle
+          grid-column: 1/2
+          grid-row: 1/2
+          
+
+      .experience 
+        grid-template-columns: 80px 1fr
+        position: relative
+        .experience_card
+          grid-column: 2/3
+          justify-self: start
+          width: 100%
+          max-width: none
+          h3
+            font-size: 2.2rem
+          .company
+            font-size: 2rem
+          
+          .description
+            font-size: 1.8rem
+
+          .date
+            display: block
+            visibility: visible
+            font-size: 1.8rem
+            margin-top: 10px
+
+        .circle
+          grid-column: 1/2
+          width: 80px
+          height: 80px
+          border-width: 4px
+          position: absolute
+          top:25px
+        .date
+          display: none
+          visibility: hidden
+
+  @media screen and (max-width: 775px)
+    margin-top: 200px
+    h2
+      font-size: 3.2rem
+
+    .experiences
+      grid-template-columns: 20px 1fr 40px
+      .line
+        left: 23px
+        grid-column: 2/3
+        width: 4px
+
+      .experience 
+        grid-template-columns: 50px 1fr
+        column-gap: 30px
+        .circle
+          width: 50px
+          height: 50px
+          top:35px
+    
+  @media screen and (max-width: 675px)
+    
+
+    .experiences
+      row-gap: 40px
+
+      .experience 
+        
+        .experience_card
+
+          h3
+            font-size: 2rem
+
+          .company
+            font-size: 1.8rem
+          
+          .description
+            font-size: 1.6rem
+
+  @media screen and (max-width: 470px)
+    h2
+      font-size: 2.8rem
+    .experiences
+      row-gap: 40px
+      grid-template-columns: 20px 1fr 20px
+
+      .line
+        display: none
+        visibility: hidden
+      .experience 
+        column-gap: 10px
+        grid-template-columns: 1fr
+        .circle
+          display: none
+          visibility: hidden
+          column-gap: 0px
+        .experience_card
+          grid-column: 1/2
+          h3
+            font-size: 1.8rem
+
+          .company
+            font-size: 1.6rem
+          
+          .description
+            font-size: 1.4rem
+            margin-top: 10px
+
+          .date
+            font-size: 1.4rem
+            margin-top: 10px
+
+  @media screen and (max-width: 380px)
+    row-gap: 20px
+    h2
+      font-size: 2.6rem
+    .experiences
+      padding: 0
+      .experience
+
+        .experience_card
+          h3
+            font-size: 1.4rem
+
+          .company
+            font-size: 1.2rem
+          
+          .description
+            font-size: 1.2rem
+
+          .date
+            font-size: 1.2rem
+

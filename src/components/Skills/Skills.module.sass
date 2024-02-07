@@ -1,0 +1,94 @@
+@import "../../styles/variables"
+
+.skills_wrapper
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr 1fr auto
+  gap: 40px
+  width: 100%
+  margin-top: 480px
+  
+
+  h2
+    justify-self: center
+    font-size: 4.8rem
+    color: $dark
+
+  .decoration
+    justify-self: center
+    width: 25px
+    height: 60px
+    background: $lightdark
+    border-radius: 20px
+
+  .skills
+    display: grid
+    grid-template-columns: 12% 1fr 12%
+    row-gap: 25px
+    .skill_group
+      width: 100%
+      display: flex
+      grid-column: 2/3
+      justify-self: center
+      gap: 30px
+      justify-content: center
+      // flex-wrap: wrap
+      .skill
+        text-align: center
+        min-width: 160px
+        background: $lightdark
+        
+        font-weight: bold
+        font-size: 2.2rem
+        color: $dark
+        padding: 10px 25px
+        border-radius: 10px
+
+  @media screen and (max-width: 1520px)
+    .skills
+      grid-template-columns: 6% 1fr 6%
+
+  @media screen and (max-width: 1275px)
+    h2
+      font-size: 3.6rem
+    .skills
+      grid-template-columns: 1fr 
+
+      .skill_group
+        grid-column: 1/2
+        gap: 20px
+
+        .skill
+          min-width: 100px
+          font-size: 1.8rem
+          padding: 5px 15px
+    
+  @media screen and (max-width: 775px)
+    margin-top: 200px
+    h2
+      font-size: 3.2rem
+    .skills
+      padding: 0 20px
+      .skill_group
+        flex-wrap: wrap
+        flex-grow: 1
+        width: 400px
+
+
+  @media screen and (max-width: 470px)
+    h2
+      font-size: 2.8rem
+    .skills
+
+      .skill_group
+        max-width: 260px
+        gap:10px
+        .skill
+          min-width: 80px
+          font-size: 1.5rem
+          padding: 5px 15px
+
+  @media screen and (max-width: 380px)
+    
+    h2
+      font-size: 2.6rem

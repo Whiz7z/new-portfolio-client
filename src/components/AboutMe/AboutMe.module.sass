@@ -1,0 +1,315 @@
+@import "../../styles/variables"
+
+
+
+header
+  display: grid
+  grid-template-columns: 12% 42% 34% 12%
+  margin-top: 240px
+  
+
+  .left_section
+    grid-column:  2/3
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    
+    padding: 0 20px
+    width: 100%
+    color: $dark
+    h1 
+      font-size: 5rem
+      
+
+    p 
+      font-size: 2.6rem
+      font-weight: regular
+      
+      
+    .buttons 
+      display: grid
+      width: 550px
+      grid-template-columns: 1fr 1fr
+      column-gap: 30px
+      text-align: center
+      line-height: 60px
+      .btn 
+        width: 260px
+        height: 70px
+
+        border: none
+        font-size: 3.2rem
+        font-weight: bold
+        cursor: pointer
+        
+        
+        color: $light
+        background-color: $dark
+        transition: box-shadow 500ms, transform 800ms, color 200ms, background-color 200ms, border-radius 500ms
+        
+
+      .contact_btn 
+        
+        border: 5px solid transparent
+        &:hover 
+          // border-top: 5px solid $dark
+          // border-left: 5px solid $dark
+          
+          // border-radius: 5px
+          background: $light
+          color: $dark
+          // transform: translateY(-7px)
+          -webkit-box-shadow: 5px 5px 0px 0px $dark, -5px -5px 0px 0px $dark
+          -moz-box-shadow: 5px 5px 0px 0px $dark, -5px -5px 0px 0px $dark
+          box-shadow: 5px 5px 0px 0px $dark, -5px -5px 0px 0px $dark
+          
+        
+      
+
+      .cv_btn 
+        &:hover 
+          
+          background: $light
+          color: $dark
+          // transform: translateY(-7px)
+          -webkit-box-shadow: 5px 5px 0px 0px $dark, -5px -5px 0px 0px $dark
+          -moz-box-shadow: 5px 5px 0px 0px $dark, -5px -5px 0px 0px $dark
+          box-shadow: 5px 5px 0px 0px $dark, -5px -5px 0px 0px $dark
+
+
+  .right_section
+    grid-column:  3/4
+    justify-self: end
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 20px
+
+    .img_wrapper 
+      display: flex
+      justify-content: center
+      align-items: center
+      
+      .img 
+        width: 560px
+        height: 560px
+        border-radius: 50%
+        object-fit: cover
+        object-position: center
+        border: 2px solid $dark
+
+    .socials 
+      display: grid
+      width: 420px
+      justify-self: center
+      grid-template-columns: 1fr 1fr 1fr 1fr
+
+      .social_item 
+        justify-self: center
+        svg 
+          cursor: pointer
+          transition: 300ms
+          width: 50px
+          fill: $dark
+
+      .telegram 
+        svg 
+          &:hover 
+            transition: 300ms
+            fill: #26a5e4
+      .linkedIn 
+        svg 
+          &:hover 
+            transition: 300ms
+            fill: #0a66c2
+      .insta 
+        svg 
+          &:hover 
+            transition: 300ms
+            fill: #e4405f
+      .git 
+        svg 
+          &:hover 
+            transition: 300ms
+            fill: #181717
+    
+    .mail_block 
+      justify-self: center
+
+      .mail 
+        padding: 0px 5px 2px 5px
+        font-size: 2.4rem
+        font-weight: regular
+        justify-self: center
+        color: $dark
+        cursor: pointer
+        display: inline-block
+        box-sizing: content-box
+        line-height: auto
+        text-decoration: underline
+        transition: 300ms
+
+        &:hover 
+          background-color: $dark
+          color: $light
+
+  @media screen and (max-width: 1680px)
+    
+    .left_section
+      height: 700px
+      h1
+        font-size: 4.6rem
+      
+      p
+        font-size:2.4rem
+    
+    .right_section
+
+      .img_wrapper 
+        .img 
+          width: 500px
+          height: 500px
+
+  @media screen and (max-width: 1500px)
+    
+    .left_section
+      height: 600px
+      h1
+        font-size: 4rem
+      
+      p
+        font-size:2.2rem
+      
+      .buttons
+        .btn
+          width: 220px
+          font-size: 2.6rem
+    
+    .right_section
+
+      .img_wrapper 
+        .img 
+          width: 400px
+          height: 400px
+    
+  @media screen and (max-width: 1280px)
+
+      .left_section
+        height: 500px
+        h1
+          font-size: 3.6rem
+        
+        p
+          font-size:2rem
+
+        .buttons
+          .btn
+            width: 200px
+            font-size: 2.4rem
+
+      .right_section
+        justify-content: space-between
+        .img_wrapper 
+          .img 
+            width: 300px
+            height: 300px
+
+  @media screen and (max-width: 1220px)
+      grid-template-columns: 1fr
+      margin-top: 140px
+      gap: 20px
+      .left_section
+        grid-column: 1/2
+        justify-self: center
+        width: 620px
+        height: auto
+        gap:20px
+
+        h1
+          text-align: center
+        
+        p
+          text-align: center
+
+        .buttons
+          justify-items: center
+          width: 100%
+
+      .right_section
+        grid-column: 1/2 
+        grid-row: 1/2
+        justify-self: center
+        gap:10px
+
+        .img_wrapper 
+          .img 
+            width: 180px
+            height: 180px
+
+        .socials 
+          width: 200px
+          .social_item 
+            svg 
+              width: 25px
+
+        .mail_block 
+          .mail 
+            font-size: 1.6rem
+    
+  @media screen and (max-width: 640px)
+
+      .left_section
+        width: 100%
+
+        h1
+          font-size: 3rem
+
+        .buttons
+          width: 100%
+          line-height: 41px
+          
+          .btn
+            width: 180px
+            height: 50px
+            font-size: 1.8rem
+
+  @media screen and (max-width: 440px)
+    margin-top: 100px
+
+    .left_section
+      width: 100%
+      h1
+        font-size: 2.6rem
+      p
+        font-size: 1.8rem
+      .buttons
+        column-gap: 15px
+        .btn
+          width: 150px
+          height: 40px
+          font-size: 1.6rem
+          line-height: 30px
+
+  @media screen and (max-width: 360px)
+
+    .left_section
+      h1
+        font-size: 2.4rem
+      p
+        font-size: 1.6rem
+      .buttons
+        .btn
+          font-size: 1.4rem
+          width: 150px
+
+  @media screen and (max-width: 355px)
+    .left_section
+      h1
+        font-size: 2.4rem
+      p
+        font-size: 1.6rem
+      .buttons
+        .btn
+          font-size: 1.4rem
+          width: 120px

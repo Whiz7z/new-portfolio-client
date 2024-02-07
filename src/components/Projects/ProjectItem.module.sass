@@ -1,0 +1,445 @@
+@import "../../styles/variables"
+
+.project_left
+  justify-self: right
+
+
+
+.project_right
+  justify-self: left
+
+  
+
+.project
+  grid-column: 2/3
+  display: grid
+  
+  cursor: pointer
+  border-radius: 8px
+  transition: 300ms
+  position: relative
+ 
+
+  .container_right
+    border-top-left-radius: 8px
+    border-bottom-left-radius: 8px
+    justify-self: left
+
+  .container_left
+    border-top-right-radius: 8px
+    border-bottom-right-radius: 8px
+    justify-self: right
+    grid-column: 2/3
+
+  .container
+    width: 1060px
+    height: 430px
+    background: $lightdark
+    
+    display: grid
+    grid-template-columns: 500px auto
+    column-gap: 50px
+    padding: 50px 45px
+    z-index: 2
+    .image_wrapper 
+      display: flex
+      justify-content: center
+      align-items: center
+      
+      .img 
+        
+        max-height: 360px
+        border-radius: 8px
+        object-fit: cover
+        object-position: center
+        border: 2px solid $dark
+
+    .info
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      article
+        color: $dark
+        h3
+          font-weight: bold
+          font-size: 3.2rem
+        p
+          font-size: 1.8rem
+          font-weight: bold
+          
+
+      ul
+        display: flex
+        flex-direction: row
+        gap: 15px
+        width: 400px
+        flex-wrap: wrap
+        
+        li
+          font-size: 1.4rem
+          font-weight: bold
+          color: $lightdark
+          list-style: none
+          background: $dark
+          padding: 7px 20px
+          border-radius: 40px
+          text-transform: uppercase
+
+  
+  
+  
+  &:hover
+    
+    .left_btn
+      transform: rotate(180deg) translateX(45px)
+      height: 430px
+      .links
+        transform: rotate(180deg)
+    .right_btn
+      
+      transform:  translateX(45px)
+      height: 430px
+      
+  
+  .right_btn
+    transition: 300ms
+    width: 45px
+    height: 425px
+    align-self: center
+    background: $dark
+    color: $light
+    border-top-right-radius: 8px
+    border-bottom-right-radius: 8px
+    grid-column: 2/3
+    transform: translateX(-45px)
+    display: grid
+    justify-content: center
+    align-items: center
+    position: absolute
+    right: 0
+    .links
+      display: flex
+      flex-direction: column
+      gap:160px
+      
+      a
+        display: flex
+        flex-direction: column
+        color: $light
+        justify-items: center
+        align-items: center
+
+        svg 
+          width: 23px
+          height: 23px
+          
+        
+        span 
+          font-size: 1rem
+    
+  .left_btn
+    transition: 300ms
+    width: 45px
+    height: 425px
+    align-self: center
+    background: $dark
+    color: $light
+    border-top-right-radius: 8px
+    border-bottom-right-radius: 8px
+    transform: rotate(180deg) translateX(-45px)
+    
+    grid-column: 1/2
+    grid-row:1/2
+    
+    display: grid
+    justify-content: center
+    align-items: center
+    position: absolute
+
+    .links
+      display: flex
+      flex-direction: column
+      gap:160px
+      
+      a
+        display: flex
+        flex-direction: column
+        color: $light
+        justify-items: center
+        align-items: center
+
+        svg 
+          width: 23px
+          height: 23px
+          
+        
+        span 
+          font-size: 1rem
+
+  @media screen and (max-width: 1520px)
+  
+  
+
+  @media screen and (max-width: 1400px)
+    
+    .container
+      width: 910px
+      height: 320px
+      grid-template-columns: 1fr 1fr
+      .image_wrapper
+        .img
+          max-height: 300px
+
+      .info
+        article
+          h3
+            font-size: 2.4rem
+          p
+            font-size: 1.6rem
+
+
+    &:hover
+      .right_btn
+        height: 320px
+
+      .left_btn
+        height: 320px
+
+    .right_btn
+      height: 315px
+      .links
+        gap: 110px
+
+    .left_btn
+      height: 315px
+      .links
+        gap: 110px
+
+
+  @media screen and (max-width: 1215px)
+
+    .container_right
+        border-radius: 8px
+
+    .container_left
+        border-radius: 8px
+
+    .container
+      width: 490px
+      height: auto
+      grid-template-columns: 1fr
+      row-gap: 20px
+      padding: 30px 30px
+      .image_wrapper
+        .img
+          max-height: 300px
+      .info
+        gap:15px
+        article
+          h3
+            font-size: 2.2rem
+          p
+            font-size: 1.4rem
+
+    &:hover
+      .container_right
+        border-bottom-left-radius: 0px
+        border-bottom-right-radius: 0px
+
+      .container_left
+        border-bottom-right-radius: 0px
+        border-bottom-left-radius: 0px
+
+      .right_btn
+        transform:  translateY(45px)
+        right: 0px
+        height: 45px
+        width: 490px
+
+      
+
+      .left_btn
+        transform:  translateY(45px)
+        height: 45px
+        width: 490px
+        left: 0px
+
+        .links
+          transform: rotateY(-180deg)
+          
+          
+
+          a
+            span
+              transform: rotateY(180deg)
+
+    .right_btn
+      width: 480px
+      height: 45px
+      transform: translateX(0px) translateY(-2px)
+      
+      border-bottom-right-radius: 8px
+      border-bottom-left-radius: 8px
+      border-top-right-radius: 0px
+      right: 5px
+      bottom: 0
+      
+      .links
+        transform: rotate(0deg)
+        gap: 160px
+        flex-direction: row
+      
+
+      
+
+    .left_btn
+      width: 480px
+      height: 45px
+      transform: none
+      border-bottom-right-radius: 8px
+      border-bottom-left-radius: 8px
+      border-top-right-radius: 0px
+      right: none
+      bottom: 0
+      align-self: flex-end
+      left: 5px
+      
+
+      .links
+        transform: rotateY(-180deg)
+        gap: 160px
+        flex-direction: row-reverse
+
+  @media screen and (max-width: 735px)
+
+    .container
+      width: 360px
+      
+      .image_wrapper
+        width: 100%
+        .img
+          width: 100%
+          max-height: none
+      .info
+        gap:15px
+        article
+          h3
+            font-size: 2.2rem
+          p
+            font-size: 1.4rem
+
+        ul 
+          width: 100%
+          gap: 10px
+          li
+            font-size: 1.2rem
+            padding: 6px 18px
+    &:hover 
+      .right_btn
+        width: 360px
+
+      .left_btn
+        width: 360px
+
+    .right_btn
+      width: 350px
+      .links
+        gap: 140px
+      
+    .left_btn
+      width: 350px
+      .links
+        gap: 140px
+
+    
+  @media screen and (max-width: 530px)
+    grid-column: 1/2
+    .container
+      width: 300px
+      padding: 20px 20px
+      .image_wrapper
+        width: 100%
+        .img
+          width: 100%
+          max-height: none
+      .info
+        gap:15px
+        article
+          h3
+            font-size: 2rem
+          p
+            font-size: 1.2rem
+
+        ul 
+          width: 100%
+          gap: 10px
+          li
+            font-size: 1.2rem
+            padding: 6px 18px
+    &:hover
+      .right_btn
+        width: 300px
+
+      .left_btn
+        width: 300px
+
+    .right_btn
+      width: 290px
+      .links
+        gap: 100px
+      
+    .left_btn
+      width: 290px
+      .links
+        gap: 100px
+
+  @media screen and (max-width: 400px)
+    .container
+      width: 280px
+      padding: 20px 20px
+    .image_wrapper
+      width: 100%
+      .img
+        width: 100%
+        max-height: none
+    .info
+      gap:15px
+      article
+        h3
+          font-size: 2rem
+        p
+          font-size: 1.2rem
+
+      ul 
+        width: 100%
+        gap: 8px
+        li
+          font-size: 1rem
+          padding: 6px 14px
+    &:hover
+      .right_btn
+        width: 280px
+        transform: translateX(0px) translateY(43px)
+
+      .left_btn
+        width: 280px
+
+    .right_btn
+      width: 270px
+      
+    
+    .left_btn
+      width: 270px
+      
+        
+        
+
+
+@media screen and (max-width: 1520px)
+  .project_right
+    justify-self: center
+
+  .project_left
+    justify-self: center
+

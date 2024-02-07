@@ -1,0 +1,53 @@
+@import "../../styles/variables"
+
+.projects_wrapper
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr 1fr auto
+  gap: 40px
+  width: 100%
+  margin-top: 480px
+
+  h2
+    justify-self: center
+    font-size: 4.8rem
+    color: $dark
+
+  .decoration
+    justify-self: center
+    width: 25px
+    height: 60px
+    background: $lightdark
+    border-radius: 20px
+
+  .projects
+    display: grid
+    grid-template-columns: 12% 1fr 12%
+    justify-items: center
+    width: 100%
+    row-gap: 90px
+
+  @media screen and (max-width: 1215px)
+    h2
+      font-size: 3.6rem
+
+  @media screen and (max-width: 775px)
+    margin-top: 200px
+    h2
+      font-size: 3.2rem
+
+  @media screen and (max-width: 530px)
+    .projects
+      grid-template-columns: 1fr
+      row-gap: 60px
+    
+
+  @media screen and (max-width: 470px)
+    row-gap: 20px
+    h2
+      font-size: 2.8rem
+
+  @media screen and (max-width: 380px)
+    
+    h2
+      font-size: 2.6rem
