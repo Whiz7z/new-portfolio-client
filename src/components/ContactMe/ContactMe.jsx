@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useSectionInView } from "../../hooks/useSectionInView";
 import emailjs from "emailjs-com";
 import styles from "./ContactMe.module.sass";
@@ -11,7 +11,7 @@ const ContactMe = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     if (email === "" || message === "") return;
-    try {
+    
       console.log(
         import.meta.env.VITE_REACT_APP_SERVICE_ID,
         import.meta.env.VITE_REACT_APP_TEMPLATE_ID
@@ -25,9 +25,7 @@ const ContactMe = () => {
         },
         import.meta.env.VITE_REACT_APP_USER_PUBLIC_KEY
       );
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
+    
   };
   return (
     <section ref={ref} className={styles.contact_wrapper} id={"contact"}>
