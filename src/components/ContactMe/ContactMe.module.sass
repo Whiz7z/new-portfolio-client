@@ -87,7 +87,10 @@
     button 
       background: $dark
       color:$light
+      justify-self: start
       width: 120px
+      min-width: 160px
+      flex-basis: content
       border: none
       font-size: 2rem
       padding: 15px 25px
@@ -95,7 +98,7 @@
       justify-self: start
       font-weight: bold
       transition: box-shadow 500ms, transform 800ms, color 200ms, background-color 200ms, border-radius 500ms
-
+      position: relative
       &:hover
         background: $light
         color: $dark
@@ -104,6 +107,23 @@
         -webkit-box-shadow: 4px 4px 0px 0px $dark, -4px -4px 0px 0px $dark
         -moz-box-shadow: 4px 4px 0px 0px $dark, -4px -4px 0px 0px $dark
         box-shadow: 4px 4px 0px 0px $dark, -4px -4px 0px 0px $dark
+
+      .success 
+        position: absolute
+        top: 10px
+        opacity: 0
+        .done
+          width: 35px
+          height: 35px
+          color: $dark
+      
+      .empty_error
+        position: absolute
+        top: 20px
+        width: 160px
+        opacity: 0
+        color: $danger
+        font-size: 1.4rem
 
   @media  screen and (max-width: 1275px)
     p
