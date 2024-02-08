@@ -43,15 +43,16 @@
       color: $dark
       width: 100%
       padding: 15px 20px
+      border: 2px solid transparent
+      outline: none
       &::placeholder
         color: $placeholder
         font-weight: 2rem
         
         transition: transform 0.8s, opacity 0.3s
       &:focus
-        -moz-outline-radius: 8px
-        outline: 2px solid $dark
-        outline-radius: 8px
+        
+        border: 2px solid $dark
         &::placeholder
           transform: translateX(680px)
           opacity: 0
@@ -68,15 +69,15 @@
       resize: vertical
       transition: 0.3s
       overflow: hidden
-      
+      border: 2px solid transparent
+      outline: none
       &::placeholder
         color: $placeholder
         font-weight: 2rem
         transition: transform 0.8s, opacity 0.35s
       &:focus
-        -moz-outline-radius: 8px
-        outline: 2px solid $dark
-        outline-radius: 8px
+        border: 2px solid $dark
+        
         
         &::placeholder
           transform: translateX(680px)
