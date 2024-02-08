@@ -45,11 +45,12 @@ html {
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
-  /* min-height: 100svh; */
+  min-height: 100dvh;
   scroll-behavior: smooth;
   background-color: #ae7e45;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
