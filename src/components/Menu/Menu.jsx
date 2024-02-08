@@ -40,6 +40,7 @@ const Menu = () => {
   const showBar = () => {
     let html = document.getElementsByTagName("html")[0];
     html.style.overflow = burgerIsOpened ? "auto" : "hidden";
+    html.style.backgroundColor = burgerIsOpened && "#084c61";
     setBurgerIsOpened((prev) => !prev);
     navRef.current.classList.toggle(styles.responsive_nav);
   };
