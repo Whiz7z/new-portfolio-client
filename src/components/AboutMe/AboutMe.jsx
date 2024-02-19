@@ -17,7 +17,8 @@ import { useSectionInView } from "../../hooks/useSectionInView";
 const AboutMe = () => {
   const { ref } = useSectionInView("About Me");
   return (
-    <header ref={ref} id={"about-me"}>
+    <header ref={ref}>
+      <span className={styles.scrollTo} id={"about-me"}></span>
       <Menu />
       <section className={styles.left_section}>
         <h1>
