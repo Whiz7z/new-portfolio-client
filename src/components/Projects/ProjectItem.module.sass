@@ -31,6 +31,16 @@
     justify-self: right
     grid-column: 2/3
 
+    .left_btn
+      transform: translateX(45px)
+      .links
+        // transform: rotate(180deg)
+        transform: rotate(180deg)
+       
+        a 
+          // transform: rotate(180deg)
+          
+
   .container
     width: 1060px
     height: 430px
@@ -92,10 +102,13 @@
   &:hover
     
     .left_btn
-      transform: rotate(180deg) translateX(45px)
+      // transform: rotate(180deg) translateX(45px)
+      transform:  translateX(-45px)
       height: 430px
       .links
-        transform: rotate(180deg)
+        //transform: rotate(180deg)
+        a 
+          // transform: rotate(-180deg)
     .right_btn
       
       transform:  translateX(45px)
@@ -145,9 +158,9 @@
     align-self: center
     background: $dark
     color: $light
-    border-top-right-radius: 8px
-    border-bottom-right-radius: 8px
-    transform: rotate(180deg) translateX(-45px)
+    border-top-left-radius: 8px
+    border-bottom-left-radius: 8px
+    transform:  translateX(45px)
     
     grid-column: 1/2
     grid-row:1/2
