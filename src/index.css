@@ -35,6 +35,7 @@ html {
   /* font-family: "Inika"; */
   font-family: "Ubuntu", sans-serif;
   background-color: #ae7e45;
+  background: #e8e3d1;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
