@@ -1,3 +1,5 @@
+@import "./styles/variables.sass";
+
 /* Указываем box sizing */
 *,
 *::before,
@@ -34,8 +36,7 @@ html {
   font-size: 62.5%;
   /* font-family: "Inika"; */
   font-family: "Ubuntu", sans-serif;
-  background-color: #ae7e45;
-  background: #e8e3d1;
+  background-color: $light;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -48,7 +49,7 @@ html {
 body {
   min-height: 100lvh;
   scroll-behavior: smooth;
-  background-color: #ae7e45;
+  background-color: $light;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   overflow-x: hidden;
@@ -118,15 +119,15 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #084c61;
+  background: $dark;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ae7e45;
+  background: $light;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #96662b;
+  background: #555;
 }
