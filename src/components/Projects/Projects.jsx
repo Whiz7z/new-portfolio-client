@@ -6,6 +6,7 @@ import rpsImage from "../../img/projects/game.png";
 import moneyTrackerImage from "../../img/projects/myexpenses.png";
 import travelImg from "../../img/projects/travel.png";
 import ProjectItem from "./ProjectItem";
+import { PROJECTS } from "../../store/store";
 
 import axios from "axios";
 import { calcLength } from "framer-motion";
@@ -34,7 +35,7 @@ const Projects = () => {
       <h2>Projects</h2>
       <div className={styles.decoration}></div>
       <div className={styles.projects}>
-        {projects.length > 0 &&
+        {/* {projects.length > 0 &&
           projects.map((project, index) => {
             return (
               <ProjectItem
@@ -46,6 +47,24 @@ const Projects = () => {
                   return skill.attributes.skillName;
                 })}
                 gitHubLink={project.gitHubLink}
+                demoLink={project.demoLink}
+                direction={project.direction}
+              />
+            );
+          })} */}
+
+        {PROJECTS.length > 0 &&
+          PROJECTS.map((project, index) => {
+            return (
+              <ProjectItem
+                key={project.name}
+                name={project.name}
+                description={project.description}
+                img={project.img}
+                technologies={project.technologies.map((skill) => {
+                  return skill;
+                })}
+                gitHubLink={project.githubLink}
                 demoLink={project.demoLink}
                 direction={project.direction}
               />

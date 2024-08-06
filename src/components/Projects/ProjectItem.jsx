@@ -42,6 +42,7 @@ const blockRightAnimation = {
 
 const ProjectItem = (props) => {
   const {
+    img,
     image,
     name,
     description,
@@ -69,7 +70,7 @@ const ProjectItem = (props) => {
         <div className={styles.image_wrapper}>
           <img
             className={styles.img}
-            src={`${import.meta.env.VITE_REACT_APP_STRAPI_API_URL}${image}`}
+            src={image ?`${import.meta.env.VITE_REACT_APP_STRAPI_API_URL}${image}` : img}
             alt="project"
           />
         </div>

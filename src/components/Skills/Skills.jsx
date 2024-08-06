@@ -6,6 +6,7 @@ import axios from "axios";
 
 import styles from "./Skills.module.sass";
 import { useSectionInView } from "../../hooks/useSectionInView";
+import { SKILLS } from "../../store/store";
 
 // let SKILLS = [
 //   "React",
@@ -50,14 +51,14 @@ const Skills = () => {
   //   console.log(Math.floor(SKILLS.length / 5));
   // });
 
-  if (skills.length > 0) {
-    for (let i = 1; skills.length > 0; i++) {
+  if (SKILLS.length > 0) {
+    for (let i = 1; SKILLS.length > 0; i++) {
       if (i % 2 !== 0) {
-        SKILLS_GROUPED[i] = skills.slice(0, 6);
-        skills.splice(0, 6);
+        SKILLS_GROUPED[i] = SKILLS.slice(0, 6);
+        SKILLS.splice(0, 6);
       } else {
-        SKILLS_GROUPED[i] = skills.slice(0, 5);
-        skills.splice(0, 5);
+        SKILLS_GROUPED[i] = SKILLS.slice(0, 5);
+        SKILLS.splice(0, 5);
       }
     }
 
@@ -85,6 +86,7 @@ const Skills = () => {
             </div>
           );
         })}
+        {/* {Object.keys(SKILLS_GROUPED).length === 0 && <p>No data found (refresh strapi)</p>} */}
       </div>
     </section>
   );
