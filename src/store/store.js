@@ -108,7 +108,7 @@ export const PROJECTS = [
     id: 3,
     name: "Energotochka",
     description:
-      "A landing page for selling charging stations for electric cars",
+      "A commercial landing page for selling charging stations for electric cars",
     img: energotochka,
     demoLink: "https://energotochkadev.onrender.com",
     technologies: ["React", "Responsive Design", "SCSS", "EmailJS"],
