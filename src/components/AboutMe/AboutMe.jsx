@@ -11,7 +11,7 @@ import GitHub from "./../../svg/GitHub";
 import myPhoto from "../../img/for portfolio.png";
 
 import Magnetic from "../Animation/Magnetic";
-import pdf from "../../pdf/Yevhen-Yevstratov new.pdf";
+import pdf from "../../pdf/Yevhen Yevstratov new.pdf";
 import { useSectionInView } from "../../hooks/useSectionInView";
 
 const AboutMe = () => {
