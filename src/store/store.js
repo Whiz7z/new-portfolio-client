@@ -20,7 +20,7 @@ export const EXPERIENCE = [
     id: 2,
     position: "Frontend Developer",
     workPlace: "DevCoding IT Studio",
-    dateSpan: "Sep 2023 – Feb 2024",
+    dateSpan: "Sep 2022 – Feb 2024",
     description:
       "Contributed to the development and redesign of modal windows and forms, enhancing user experience. <br/> <strong>Ensured Compatibility:</strong> Conducted manual testing across devices and screen orientations, ensuring a seamless user experience. Bug Tracking & Reporting: Utilized Trello for efficient bug reporting and tracking, improving project workflow.",
   },
