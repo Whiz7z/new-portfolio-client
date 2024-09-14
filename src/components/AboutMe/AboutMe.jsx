@@ -32,7 +32,7 @@ const AboutMe = () => {
           <p>
             I am currently based in London
             <br />
-            I have more than 2 years of experience
+            I have more than 3 years of experience
             <br /> in web development
           </p>
 
