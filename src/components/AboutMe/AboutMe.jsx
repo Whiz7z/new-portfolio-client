@@ -16,6 +16,7 @@ import { useSectionInView } from "../../hooks/useSectionInView";
 
 const AboutMe = () => {
   const { ref } = useSectionInView("About Me");
+
   return (
     <header ref={ref}>
       <span className={styles.scrollTo} id={"about-me"}></span>
@@ -51,7 +52,10 @@ const AboutMe = () => {
           </button>
           <button
             className={`${styles.cv_btn} ${styles.btn}`}
-            onClick={() => window.open(pdf)}
+            onClick={() => {
+              window.gtag_report_conversion();
+              window.open(pdf);
+            }}
           >
             Download CV
           </button>
